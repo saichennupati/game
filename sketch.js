@@ -95,10 +95,11 @@ gameState = PLAY
       podium.velocityX = -(19);
    }
    
-   if(keyDown("space")){
+   if(touches.length > 0 || keyDown("space")){
   obstacle1.velocityX = -(16);
   obstacle2.velocityX = -(16);
   podium.velocityX = (19);
+     touches = []
    }
   
    //console.log(obstacle1.x)
