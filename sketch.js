@@ -120,14 +120,16 @@ gameState = PLAY
  }
 
 if(person.collide(obstacle1)){
-  if(keyDown("UP_ARROW") && person.y >= 100 ){
+  if(touches.length > 0 || keyDown("UP_ARROW") && person.y >= 100 ){
     person.velocityY= -8;
+    touches = []
   }
 }
 
 if(person.collide(obstacle2)){
-  if(keyDown("UP_ARROW") && person.y >= 100 ){
+  if(touches.length > 0 || keyDown("UP_ARROW") && person.y >= 100 ){
     person.velocityY= -8;
+    touches = []
   }
 }
   //console.log(person.y)
